@@ -1,0 +1,15 @@
+<h1> Shorten a URL </h1>
+
+<%= form_for @url do |f| %>
+	<p>
+		<%= f.label :original %> : <%= f.text_field :original %>
+
+	</p>
+
+	<p>
+		<%= f.hidden_field :random_id, :value => @url.random_id %>
+		<%= f.submit "Submit my URL" %>
+
+	</p>
+
+<% end %>
